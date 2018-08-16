@@ -260,11 +260,10 @@ public class ToASCII {
     }
 
     public static void main(String[] args) throws Exception {
-        // convertToGrayScale(new File("src/pvz.jpg"), true);
         try {
-			convertToASCIIAverage(new File(args[0]), args[1].equalsIgnoreCase("true"), Integer.parseInt(args[2]), args[3]);
-		} catch(Exception e) {
-			System.out.println("java ToASCII [filename] [flag for black and white] [pixel for one character] [output file name]");
-		}
+		convertToASCIIAverage(new File(args[0]), args[1].equalsIgnoreCase("true"), Integer.parseInt(args[2]), args[3]);
+	} catch(Exception e) {
+		System.out.println("Usage: java ToASCII [filename] [flag for black and white] [pixel for one character] [output file name]");
+	}
     }
 }
