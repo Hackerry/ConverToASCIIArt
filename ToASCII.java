@@ -10,8 +10,6 @@ import java.util.Date;
 
 import javax.imageio.ImageIO;
 
-import javafx.geometry.Pos;
-
 /**
 *	Name: Hackerry
 *	Description: New method of generating ASCII art pictures. Support both black and white pictures and color pictures.
