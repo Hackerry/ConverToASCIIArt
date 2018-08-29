@@ -81,8 +81,7 @@ public class ToASCII {
         }
 
         if (output) {
-            String path = "C:\\Users\\Administrator\\Desktop\\"
-                    + file.getName().subSequence(0, file.getName().lastIndexOf(".")) + ".jpg";
+            String path = file.getName().subSequence(0, file.getName().lastIndexOf(".")) + ".jpg";
             System.out.println(path);
             ImageIO.write(image, "jpg", new File(path));
         }
@@ -109,7 +108,7 @@ public class ToASCII {
             g.setColor(Color.WHITE);
             g.drawString(st, 0, 16);
             g.dispose();
-            ImageIO.write(image, "jpg", new File("C:\\Users\\Administrator\\Desktop\\test\\a" + (count++) + ".jpg"));
+            ImageIO.write(image, "jpg", new File("a" + (count++) + ".jpg"));
         }
     }
 
