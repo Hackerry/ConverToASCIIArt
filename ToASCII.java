@@ -57,7 +57,7 @@ public class ToASCII {
             // System.out.println();
         }
         g.dispose();
-        ImageIO.write(output, "jpg", new File("C:\\Users\\Administrator\\Desktop\\" + outputName + ".jpg"));
+        ImageIO.write(output, "jpg", new File(outputName + ".jpg"));
     }
 
     private static BufferedImage convertToBlackAndWhite(File file, boolean output) throws Exception {
