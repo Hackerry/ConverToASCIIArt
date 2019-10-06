@@ -63,7 +63,7 @@ public class ToASCII {
     private static BufferedImage convertToBlackAndWhite(File file, boolean output) throws Exception {
         // Gray = (R*299 + G*587 + B*114 + 500) / 1000
         // Gray = (R*30 + G*59 + B*11 + 50) / 100
-        if (!file.exists() || (!file.getName().endsWith("jpg") && !file.getName().endsWith("png")))
+        if (!file.exists() || (!file.getName().endsWith("jpg") && !file.getName().endsWith("png") && !file.getName().endsWith("jpeg")))
             return null;
 
         BufferedImage original = ImageIO.read(file);
@@ -262,7 +262,7 @@ public class ToASCII {
         try {
 		convertToASCIIAverage(new File(args[0]), args[1].equalsIgnoreCase("true"), Integer.parseInt(args[2]), args[3]);
 	} catch(Exception e) {
-		System.out.println("Usage: java ToASCII [filename] [flag for black and white] [pixel for one character] [output file name]");
+		System.out.println("Usage: java ToASCII [filename] [flag for black and white] [pixel for one character] [output file name (without extension)]");
 	}
     }
 }
